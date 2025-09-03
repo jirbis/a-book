@@ -31,9 +31,10 @@ jobs:
           --accept 200,204,206,429
           --max-concurrency 4
           --verbose
-          --failIfEmpty false
+          --exclude-path build
           .
          fail: true
+         failIfEmpty: false
 
 
       - name: Pandoc HTML smoke test
