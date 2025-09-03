@@ -27,13 +27,13 @@ jobs:
       - name: Link check
         uses: lycheeverse/lychee-action@v2
         with:
-          args: >
-            --accept 200,204,206,429
-            --max-concurrency 4
-            --stream
-            --verbose
-            **/*.md
-          fail: true
+         args: >
+          --accept 200,204,206,429
+          --max-concurrency 4
+          --verbose
+          **/*.md
+         fail: true
+
 
       - name: Pandoc HTML smoke test
         uses: addnab/docker-run-action@v3
