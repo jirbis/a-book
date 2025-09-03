@@ -1,31 +1,48 @@
-# a-book
-Repo template for  book writters 
-.
-├─ book/                    #
-│  ├─ 00-front-matter.md
-│  ├─ 01-chapter-1.md
-│  ├─ 02-chapter-2.md
-│  ├─ images/
-│  ├─ styles/
-│  │   ├─ book.css          # common style (for HTML/EPUB/PDF via  CSS)
-│  │   └─ fonts.css         # @font-face 
-│  └─ fonts/
-│      ├─ Inter-Regular.woff2
-│      └─ ...
-├─ build/                   # ( CI;  .gitignore)
-├─ metadata/
-│  ├─ metadata.yaml         # (title, author, lang, cover, isbn, etc.)
-│  └─ epub-metadata.xml     # extended epub metadata
-├─ .github/
-│  ├─ workflows/
-│  │   ├─ preview.yml       # 
-│  │   └─ release.yml       # 
-│  ├─ pull_request_template.md
-│  └─ ISSUE_TEMPLATE.md
-├─ .editorconfig
-├─ .markdownlint.json
-├─ .vale.ini                # author style, tone, AI actor/system 
-├─ .gitignore
-├─ Makefile                 # CI
-└─ README.md
+# Book Publishing Pipeline
 
+This repository contains the source files and build system for a Markdown-first book. The goal is to treat the text and layout as code so that you can collaborate via pull requests, run automated tests on your chapters, and build reproducible releases in multiple formats (HTML, EPUB and PDF).
+
+## Directory structure
+
+```
+book-repo/
+├── book/              # Markdown chapters and assets
+│   ├── 00-front-matter.md
+│   ├── 1-chapter-1.md
+│   └── styles/        # CSS and fonts for HTML/EPUB styling
+├── metadata/          # Metadata for the book (title, author, etc.)
+├── Makefile           # Local build commands (pandoc)
+├── .github/workflows/ # CI workflows
+└── README.md          # This file
+```
+
+## Build locally
+
+Requirements: Pandoc and optionally LaTeX (for PDF).
+
+```bash
+make all    # builds html, epub, pdf
+make html   # builds html
+make epub   # builds epub
+make pdf    # builds pdf
+```
+
+Output is written into \`build/\`.
+
+## CI/CD workflow
+
+- On merge to main branch:
+  - Run tests (Markdown lint, link check, pandoc smoke build).
+  - Build HTML, EPUB, PDF.
+  - Upload as artifacts.
+
+## Conventions
+
+- Each chapter is a separate .md file in \`book/\`.
+- Stylesheets and fonts live under \`book/styles/\`.
+- Metadata in \`metadata/metadata.yaml\`.
+- Drafts in feature branches; merging PR to \`main\` = production release.
+
+## License
+
+Content license is defined by the author. Default: © 2025 Anonymous.
