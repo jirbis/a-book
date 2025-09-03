@@ -4,7 +4,7 @@ This repository contains the source files and build system for a Markdown-first 
 
 ## Directory structure
 
-```
+```text
 book-repo/
 ├── book/              # Markdown chapters and assets
 │   ├── 00-front-matter.md
