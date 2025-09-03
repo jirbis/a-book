@@ -33,6 +33,7 @@ $(EPUB): $(SOURCES) $(CSS) $(META) | $(BUILD)
 	  --from gfm --to epub3 \
 	  --metadata-file=$(META) \
 	  --css=$(CSS) \
+	  --epub-cover-image=book/images/cover.png \
 	  -o $(EPUB)
 
 pdf: $(PDF)
