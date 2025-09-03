@@ -16,4 +16,3 @@ Fixes # (ссылка на issue)
 ## Notes
 
 <!-- Any additional comments -->
-
