@@ -1,0 +1,102 @@
+name: Build on merge to main
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+  checks: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: |
+            **/*.md
+            !build/**
+
+      - name: Link check
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >
+            --accept 200,204,206,429
+            --max-concurrency 4
+            --stream
+            --verbose
+            **/*.md
+          fail: true
+
+      - name: Pandoc HTML smoke test
+        uses: addnab/docker-run-action@v3
+        with:
+          image: pandoc/core:latest
+          options: -v ${{ github.workspace }}:/work
+          run: |
+            cd /work
+            mkdir -p build
+            pandoc book/*.md \
+              --from gfm --to html5 \
+              --standalone \
+              --metadata-file=metadata/metadata.yaml \
+              --css=book/styles/book.css \
+              -o build/book.html
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build HTML & EPUB (Pandoc core)
+        uses: addnab/docker-run-action@v3
+        with:
+          image: pandoc/core:latest
+          options: -v ${{ github.workspace }}:/work
+          run: |
+            cd /work
+            mkdir -p build
+            pandoc book/*.md \
+              --from gfm --to html5 \
+              --standalone \
+              --metadata-file=metadata/metadata.yaml \
+              --css=book/styles/book.css \
+              -o build/book.html
+
+            pandoc book/*.md \
+              --from gfm --to epub3 \
+              --metadata-file=metadata/metadata.yaml \
+              --css=book/styles/book.css \
+              -o build/book.epub
+
+      - name: Build PDF (Pandoc LaTeX)
+        uses: addnab/docker-run-action@v3
+        with:
+          image: pandoc/latex:latest
+          options: -v ${{ github.workspace }}:/work
+          run: |
+            cd /work
+            mkdir -p build
+            pandoc book/*.md \
+              --from gfm --to pdf \
+              --pdf-engine=xelatex \
+              --metadata-file=metadata/metadata.yaml \
+              -o build/book.pdf
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: book-artifacts
+          path: |
+            build/book.html
+            build/book.epub
+            build/book.pdf
