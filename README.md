@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # Book Publishing Pipeline
 
 This repository contains the source files and build system for a Markdown-first book. The goal is to treat the text and layout as code so that you can collaborate via pull requests, run automated tests on your chapters, and build reproducible releases in multiple formats (HTML, EPUB and PDF).
