@@ -10,6 +10,10 @@
     <dc:description>Draft metadata for the EPUB version of the book.</dc:description>
     <meta property="dcterms:modified">2025-09-04T00:00:00Z</meta>
   </metadata>
-  <manifest/>
+  <manifest>
+    <item id="cover-image" href="book/images/cover.png" media-type="image/png"/>
+  </manifest>
+
+  
   <spine/>
 </package>
