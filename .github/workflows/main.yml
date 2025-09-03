@@ -31,7 +31,8 @@ jobs:
           --accept 200,204,206,429
           --max-concurrency 4
           --verbose
-          **/*.md
+          --failIfEmpty false
+          .
          fail: true
 
 
