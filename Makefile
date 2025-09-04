@@ -34,6 +34,8 @@ $(EPUB): $(SOURCES) $(CSS) $(META) | $(BUILD)
 	  --metadata-file=$(META) \
 	  --css=$(CSS) \
 	  --epub-cover-image=book/images/cover.png \
+      --toc \
+      --toc-depth=2 \
 	  -o $(EPUB)
 
 pdf: $(PDF)
