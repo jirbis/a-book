@@ -5,16 +5,16 @@ This repository contains a Markdown-based book source and an automated publishin
 
 ## 🧪 CI Workflow: Test and Build
 
-### ✅ Triggers:
+### ✅ Triggers
 
 - On **pull request** → run `test` jobs (lint, link check, build smoke test)
 - On **push to `main`** → run `test` and full `build` (HTML, EPUB, PDF)
 
 ### 🧾 Jobs Overview
 
-#### 🔍 `test` job
+Run on every PR and on main push
 
-Runs on every PR and on main push:
+#### 🔍 `test` job
 
 - ✅ **Checkout** repository
 - ✅ **Markdownlint** via `markdownlint-cli2` to enforce style
@@ -22,8 +22,6 @@ Runs on every PR and on main push:
 - ✅ **Pandoc smoke test**: builds HTML preview of book to ensure structure is valid
 
 #### 📦 `build` job
-
-Runs **only on push to `main`**:
 
 - ✅ Build full **HTML** version of the book
 - ✅ Build **EPUB** version (with embedded styles and cover image)
