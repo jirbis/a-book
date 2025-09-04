@@ -1,0 +1,134 @@
+[
+  {
+    "path": "book/00-front-matter.md",
+    "level": 2,
+    "title": "Foreword",
+    "anchor": "foreword"
+  },
+  {
+    "path": "book/1-chapter-1.md",
+    "level": 1,
+    "title": "Chapter One: Paper Bridges",
+    "anchor": "chapter-one-paper-bridges"
+  },
+  {
+    "path": "book/2-chapter-2.md",
+    "level": 1,
+    "title": "Chapter 2",
+    "anchor": "chapter-2"
+  },
+  {
+    "path": "book/2-chapter-2.md",
+    "level": 2,
+    "title": "Section 2.1",
+    "anchor": "section-21"
+  },
+  {
+    "path": "book/2-chapter-2.md",
+    "level": 2,
+    "title": "Section 2.2",
+    "anchor": "section-22"
+  },
+  {
+    "path": "book/2-chapter-2.md",
+    "level": 2,
+    "title": "Section 2.3",
+    "anchor": "section-23"
+  },
+  {
+    "path": "book/2-chapter-2.md",
+    "level": 2,
+    "title": "Section 2.4",
+    "anchor": "section-24"
+  },
+  {
+    "path": "book/3-chapter-3.md",
+    "level": 1,
+    "title": "Chapter 3",
+    "anchor": "chapter-3"
+  },
+  {
+    "path": "book/3-chapter-3.md",
+    "level": 2,
+    "title": "Section 3.1",
+    "anchor": "section-31"
+  },
+  {
+    "path": "book/3-chapter-3.md",
+    "level": 2,
+    "title": "Section 3.2",
+    "anchor": "section-32"
+  },
+  {
+    "path": "book/3-chapter-3.md",
+    "level": 2,
+    "title": "Section 3.3",
+    "anchor": "section-33"
+  },
+  {
+    "path": "book/3-chapter-3.md",
+    "level": 2,
+    "title": "Section 3.4",
+    "anchor": "section-34"
+  },
+  {
+    "path": "book/4-chapter-4.md",
+    "level": 1,
+    "title": "Chapter 4",
+    "anchor": "chapter-4"
+  },
+  {
+    "path": "book/4-chapter-4.md",
+    "level": 2,
+    "title": "Section 4.1",
+    "anchor": "section-41"
+  },
+  {
+    "path": "book/4-chapter-4.md",
+    "level": 2,
+    "title": "Section 4.2",
+    "anchor": "section-42"
+  },
+  {
+    "path": "book/4-chapter-4.md",
+    "level": 2,
+    "title": "Section 4.3",
+    "anchor": "section-43"
+  },
+  {
+    "path": "book/4-chapter-4.md",
+    "level": 2,
+    "title": "Section 4.4",
+    "anchor": "section-44"
+  },
+  {
+    "path": "book/5-chapter-5.md",
+    "level": 1,
+    "title": "Chapter 5",
+    "anchor": "chapter-5"
+  },
+  {
+    "path": "book/5-chapter-5.md",
+    "level": 2,
+    "title": "Section 5.1",
+    "anchor": "section-51"
+  },
+  {
+    "path": "book/5-chapter-5.md",
+    "level": 2,
+    "title": "Section 5.2",
+    "anchor": "section-52"
+  },
+  {
+    "path": "book/5-chapter-5.md",
+    "level": 2,
+    "title": "Section 5.3",
+    "anchor": "section-53"
+  },
+  {
+    "path": "book/5-chapter-5.md",
+    "level": 2,
+    "title": "Section 5.4",
+    "anchor": "section-54"
+  }
+]
