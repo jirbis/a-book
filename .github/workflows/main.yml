@@ -78,6 +78,7 @@ jobs:
               --from gfm --to epub3 \
               --metadata-file=metadata/metadata.yaml \
               --css=book/styles/book.css \
+              --epub-cover-image=book/images/cover.png \
               -o build/book.epub
 
       - name: Build PDF (Pandoc LaTeX)
