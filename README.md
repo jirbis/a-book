@@ -12,6 +12,7 @@ This repository contains a Markdown-based book source and an automated publishin
 ### 🧾 Jobs Overview
 
 #### 🔍 `test` job
+
 Runs on every PR and on main push:
 - ✅ **Checkout** repository
 - ✅ **Markdownlint** via `markdownlint-cli2` to enforce style
@@ -19,6 +20,7 @@ Runs on every PR and on main push:
 - ✅ **Pandoc smoke test**: builds HTML preview of book to ensure structure is valid
 
 #### 📦 `build` job
+
 Runs **only on push to `main`**:
 - ✅ Build full **HTML** version of the book
 - ✅ Build **EPUB** version (with embedded styles and cover image)
@@ -35,6 +37,7 @@ build/book.pdf
 ```
 
 These are available under GitHub Actions → Artifacts after successful `main` push.
+
 ## Directory structure
 
 ```text
