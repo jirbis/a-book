@@ -6,6 +6,7 @@ This repository contains a Markdown-based book source and an automated publishin
 ## 🧪 CI Workflow: Test and Build
 
 ### ✅ Triggers:
+
 - On **pull request** → run `test` jobs (lint, link check, build smoke test)
 - On **push to `main`** → run `test` and full `build` (HTML, EPUB, PDF)
 
@@ -14,6 +15,7 @@ This repository contains a Markdown-based book source and an automated publishin
 #### 🔍 `test` job
 
 Runs on every PR and on main push:
+
 - ✅ **Checkout** repository
 - ✅ **Markdownlint** via `markdownlint-cli2` to enforce style
 - ✅ **Link check** via `lychee` to validate all URLs
@@ -22,6 +24,7 @@ Runs on every PR and on main push:
 #### 📦 `build` job
 
 Runs **only on push to `main`**:
+
 - ✅ Build full **HTML** version of the book
 - ✅ Build **EPUB** version (with embedded styles and cover image)
 - ✅ Build **PDF** version using LaTeX backend (`xelatex`)
@@ -30,6 +33,7 @@ Runs **only on push to `main`**:
 ## 🔧 Output
 
 All formats are built into the `build/` folder:
+
 ```text
 build/book.html
 build/book.epub
