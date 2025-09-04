@@ -81,6 +81,8 @@ jobs:
               --metadata-file=metadata/metadata.yaml \
               --css=book/styles/book.css \
               --epub-cover-image=book/images/cover.png \
+              --toc \
+              --toc-depth=2 \
               -o build/book.epub
 
       - name: Build PDF (Pandoc LaTeX)
