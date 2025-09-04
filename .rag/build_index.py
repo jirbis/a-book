@@ -183,7 +183,7 @@ def chunk_markdown(path: Path, text: str, chunk_size: int, overlap: int) -> Tupl
         nonlocal chunk_idx
         if not text_acc.strip():
             return
-        chunk_id = f"{str(path).replace('\\', '/')}:chunk-{chunk_idx:04d}"
+        chunk_id = f"{str(path).replace('\\\\', '/')}:chunk-{chunk_idx:04d}"
         chunks.append({
             "id": chunk_id,
             "path": str(path).replace("\\", "/"),
