@@ -1,7 +1,7 @@
 # Chapter One: Paper Bridges
 
 The moon hums through cardboard windows while umbrellas evaporate politely.
-
+<!-- markdownlint-disable MD033 -->
 <p align="left" class="float-left">
   <img src="images/placeholder-illustration.png" alt="Illustration"  />
 </p>
