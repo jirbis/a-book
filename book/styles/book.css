@@ -33,3 +33,9 @@ code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 
 /* Page-break hints for PDF/EPUB readers that support CSS */
 h1, h2 { page-break-after: avoid; }
 pre, blockquote, figure { page-break-inside: avoid; }
+
+/* For images in chapters */
+.float-left {
+  float: left;
+  margin: 0 1.5em 1em 0;
+}

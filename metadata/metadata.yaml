@@ -4,3 +4,4 @@ lang: "en"
 rights: "© 2025 Anonymous"
 description: "A draft book generated as a CI/CD example."
 publisher: "Jirbis Press"
+cover-image: book/images/cover.png
