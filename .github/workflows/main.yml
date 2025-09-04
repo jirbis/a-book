@@ -1,12 +1,14 @@
-name: Build on merge to main
+name: Test and Build
 
 on:
   push:
     branches: [ "main" ]
+  pull_request:
 
 permissions:
   contents: write
   checks: write
+
 
 jobs:
   test:
@@ -53,6 +55,8 @@ jobs:
               -o build/book.html
 
   build:
+    # Run only on merge to main
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     needs: test
     runs-on: ubuntu-latest
     steps:
