@@ -3,7 +3,7 @@
 The moon hums through cardboard windows while umbrellas evaporate politely.
 
 <p align="left" style="float: left; margin: 0 20px 20px 0;">
-  <img src="images/placeholder-illustration-1-small.png" alt="Illustration" width="30%" />
+  <img src="images/placeholder-illustration.png" alt="Illustration"  />
 </p>
 
 Footsteps collect in jars like postcards of thunder. A teacup invents a staircase,
