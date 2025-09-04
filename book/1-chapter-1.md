@@ -2,7 +2,7 @@
 
 The moon hums through cardboard windows while umbrellas evaporate politely.
 
-![Illustration](images/placeholder-illustration-1.png)
+![Illustration](images/placeholder-illustration.png)
 
 Footsteps collect in jars like postcards of thunder. A teacup invents a staircase,
 and the staircase applauds. Everything continues to almost begin.
