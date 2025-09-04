@@ -2,7 +2,7 @@
 
 The moon hums through cardboard windows while umbrellas evaporate politely.
 
-<p align="left" style="float: left; margin: 0 20px 20px 0;">
+<p align="left" class="float-left">
   <img src="images/placeholder-illustration.png" alt="Illustration"  />
 </p>
 
